@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mandagreen_FriendlyLog>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Mandagreen_FriendlyLog>
+    </modules>
+</config>

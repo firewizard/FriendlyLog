@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+
+<config>
+	<modules>
+		<Mandagreen_FriendlyLog>
+			<version>1.0.0</version>
+		</Mandagreen_FriendlyLog>
+	</modules>
+	<global>
+		<models>
+            <mgfriendlylog>
+                <class>Mandagreen_FriendlyLog_Model</class>
+                <resourceModel>mgfriendlylog_resource</resourceModel>
+            </mgfriendlylog>
+            <mgfriendlylog_resource>
+                <class>Mandagreen_FriendlyLog_Model_Resource</class>
+                <entities>
+                    <friendlylog_queue>
+                        <table>friendlylog_queue</table>
+                    </friendlylog_queue>
+                </entities>
+            </mgfriendlylog_resource>
+		</models>
+
+        <resources>
+            <mgfriendlylog_setup>
+                <setup>
+                    <module>Mandagreen_FriendlyLog</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </mgfriendlylog_setup>
+        </resources>
+
+		<helpers>
+			<mgfriendlylog>
+				<class>Mandagreen_FriendlyLog_Helper</class>
+			</mgfriendlylog>
+		</helpers>
+
+		<blocks>
+			<mgfriendlylog>
+				<class>Mandagreen_FriendlyLog_Block</class>
+			</mgfriendlylog>
+		</blocks>
+	</global>
+	
+	<frontend>
+        <translate>
+            <modules>
+                <Mandagreen_FriendlyLog>
+                    <files>
+                        <default>Mandagreen_FriendlyLog.csv</default>
+                    </files>
+                </Mandagreen_FriendlyLog>
+            </modules>
+        </translate>
+	</frontend>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <mgfriendlylog before="Mage_Adminhtml">Mandagreen_FriendlyLog_Adminhtml</mgfriendlylog>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <mgfriendlylog>
+                    <file>mg/friendlylog.xml</file>
+                </mgfriendlylog>
+            </updates>
+        </layout>
+    </adminhtml>
+
+    <crontab>
+        <jobs>
+            <mgfriendlylog_cleanup>
+                <schedule>
+                    <cron_expr>20 3 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mgfriendlylog/cron::cleanup</model>
+                </run>
+            </mgfriendlylog_cleanup>
+        </jobs>
+    </crontab>
+
+    <default>
+        <dev>
+            <mgfriendlylog>
+                <days_to_keep>14</days_to_keep>
+            </mgfriendlylog>
+        </dev>
+    </default>
+</config>

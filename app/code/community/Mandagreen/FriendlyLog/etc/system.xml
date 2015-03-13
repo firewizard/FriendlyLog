@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <dev>
+            <groups>
+                <mgfriendlylog translate="label comment" module="mgfriendlylog">
+                    <label>Friendly Log (by mandagreen.com)</label>
+                    <sort_order>500</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <days_to_keep translate="label comment">
+                            <label>Days to keep</label>
+                            <comment><![CDATA[Number of days to keep logs before being deleted by garbage collector]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </days_to_keep>
+                    </fields>
+                </mgfriendlylog>
+            </groups>
+        </dev>
+    </sections>
+</config>

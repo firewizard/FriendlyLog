@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<layout>
+    <adminhtml_friendlylog_index>
+        <reference name="head">
+            <action method="addItem"><type>js_css</type><name>prototype/windows/themes/default.css</name></action>
+            <action method="addItem"><type>js_css</type><name>prototype/windows/themes/magento.css</name></action>
+        </reference>
+    </adminhtml_friendlylog_index>
+
+    <adminhtml_friendlylog_ajax>
+        <remove name="header"/>
+        <remove name="menu"/>
+        <remove name="footer"/>
+        <remove name="js"/>
+        <remove name="profiler"/>
+        <remove name="notification_window"/>
+        <remove name="global_notices"/>
+        <remove name="notifications"/>
+        <remove name="left"/>
+        <remove name="before_body_end"/>
+
+        <reference name="root">
+            <action method="setTemplate"><template>mg/friendlylog/empty.phtml</template></action>
+        </reference>
+    </adminhtml_friendlylog_ajax>
+</layout>

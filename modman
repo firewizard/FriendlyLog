@@ -1,0 +1,5 @@
+app/etc/modules/Mandagreen_FriendlyLog.xml                      app/etc/modules/Mandagreen_FriendlyLog.xml
+app/code/community/Mandagreen/FriendlyLog/                      app/code/community/Mandagreen/FriendlyLog/
+app/locale/en_US/Mandagreen_FriendlyLog.csv                     app/locale/en_US/Mandagreen_FriendlyLog.csv
+app/design/adminhtml/default/default/layout/mg/friendlylog.xml  app/design/adminhtml/default/default/layout/mg/friendlylog.xml
+app/design/adminhtml/default/default/template/mg/friendlylog    app/design/adminhtml/default/default/template/mg/friendlylog

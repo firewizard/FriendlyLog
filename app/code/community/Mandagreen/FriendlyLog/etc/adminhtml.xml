@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<mgfriendlylog translate="title">
+								<title>Friendly Log</title>
+								<sort_order>1000</sort_order>
+							</mgfriendlylog>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+
+	<menu>
+		<system>
+			<children>
+				<mgfriendlylog translate="title" module="mgfriendlylog">
+					<title>Friendly Log</title>
+					<sort_order>1000</sort_order>
+                    <action>adminhtml/friendlylog/index</action>
+				</mgfriendlylog>
+			</children>
+		</system>
+	</menu>
+</config>
